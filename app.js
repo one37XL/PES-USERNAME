@@ -1,4 +1,13 @@
-
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAgl9G_XxB4UGHyTeKF0OiauYzU97IbQE8",
+  authDomain: "pes-username.firebaseapp.com",
+  projectId: "pes-username",
+  storageBucket: "pes-username.firebasestorage.app",
+  messagingSenderId: "54971554163",
+  appId: "1:54971554163:web:759a82758451cbaeefcd06",
+  measurementId: "G-N5ZEFBWFKK"
+};
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
@@ -133,4 +142,5 @@ refreshBtn.addEventListener('click', function () {
 });
 
 // Initial load
+
 loadPlayers();
