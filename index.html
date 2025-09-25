@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PES Gamer Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <header class="pes-header">
+            <!-- Using a placeholder PES/eFootball logo -->
+            <img src="efootball.png" alt="PES Gamer Connect Logo" class="pes-logo"
+                style="width: 100px; height: 100px; border-radius: 50%; border: 1px solid white; margin: 0 auto 15px; display: block;">
+            <h1>PES Gamer Connect</h1>
+            <p>Find teammates and opponents worldwide</p>
+        </header>
+
+        <main>
+            <section class="submit-section">
+                <h2><i class="fas fa-user-plus"></i> Add Your Username</h2>
+                <form id="usernameForm">
+                    <div class="form-group">
+                        <label for="username"><i class="fas fa-gamepad"></i> PES Username</label>
+                        <input type="text" id="username" placeholder="Your in-game username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="region"><i class="fas fa-globe"></i> Region</label>
+                        <select id="region" required>
+                            <option value="">Select your region</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Africa">Africa</option>
+                            <option value="North America">North America</option>
+                            <option value="South America">South America</option>
+                            <option value="Oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="pes-button">
+                        <i class="fas fa-paper-plane"></i> Submit
+                    </button>
+                </form>
+            </section>
+
+            <section class="players-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> Available Players</h2>
+                    <div class="controls">
+                        <select id="filterRegion">
+                            <option value="">All Regions</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Africa">Africa</option>
+                            <option value="North America">North America</option>
+                            <option value="South America">South America</option>
+                            <option value="Oceania">Oceania</option>
+                        </select>
+                        <button id="refreshBtn" class="pes-button">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+
+                <div class="players-list" id="playersList">
+                    <!-- Players will be listed here -->
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading players...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="pes-footer">
+            <p>© 2025 PES Gamer Connect | Not affiliated with Konami</p>
+            <p>nicknjau ind.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
